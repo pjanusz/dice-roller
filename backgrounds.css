@@ -1,0 +1,49 @@
+.rand-d2backgrd {
+    background-image: url('/img/coin_s.jpg');
+}
+
+.rand-d4backgrd {
+    background-image: url('/img/d4s.jpg');
+}
+
+.rand-d6backgrd {
+    background-image: url('/img/d6s.jpg');
+}
+
+.rand-d8backgrd {
+    background-image: url('/img/d8s.jpg');
+}
+
+.rand-d10backgrd {
+    background-image: url('/img/d10s.jpg');
+}
+
+.rand-d12backgrd {
+    background-image: url('/img/d12s.jpg');
+}
+
+.rand-d20backgrd {
+    background-image: url('/img/d20s.jpg');
+}
+
+.rand-d100backgrd {
+    background-image: url('/img/d100s.jpg');
+}
+
+.rand-coinBckgrd {
+    background-image: url('/img/coin_sel.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rand-coin-flip-heads {
+    background-image: url('/img/coin_good.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.rand-coin-flip-tails {
+    background-image: url('img/coin_bad.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}

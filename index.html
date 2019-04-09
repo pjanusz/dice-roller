@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="backgrounds.css">
+  <title>RandomiZer</title>
+</head>
+
+<body>
+  <div id="rand-container">
+    <h2 id="rand-title" class="rand-titlebackgrd">Dice Roller</h2>
+    <div id="rand-dices" class="rand-dices">
+      <button id="rand-coin" class="rand-dice rand-d2backgrd" value="1">Coin</button>
+      <button id="rand-d4" class="rand-dice rand-d4backgrd" value="4">d4</button>
+      <button id="rand-d6" class="rand-dice rand-d6backgrd" value="6">d6</button>
+      <button id="rand-d8" class="rand-dice rand-d8backgrd" value="8">d8</button>
+      <button id="rand-d10" class="rand-dice rand-d10backgrd" value="10">d10</button>
+      <button id="rand-d12" class="rand-dice rand-d12backgrd" value="12">d12</button>
+      <button id="rand-d20" class="rand-dice rand-d20backgrd" value="20">d20</button>
+      <button id="rand-d100" class="rand-dice rand-d100backgrd" value="100">d100</button>
+    </div>
+    <div class="rand-buttons">
+      <button id="rand-roll-button" type="button" class="rand-button rand-inactive-button" disabled>Roll</button>
+      <button id="rand-clear-sel" type="button" class="rand-button rand-inactive-button" disabled>Clear</button>
+    </div>
+    <div id="rand-selected" class="rand-dices rand-selected">
+      Choose your destiny...
+      <div id="rand-coin-container" class="rand-coin-container rand-coin-container-hidden">
+        <img class="rand-coin-face rand-coin-heads" src="/img/coin_good.png" alt="heads">
+        <img class="rand-coin-face rand-coin-tails" src="/img/coin_bad.png" alt="tails">
+      </div>
+    </div>
+    <p id="rand-total">Death or glory</p>
+    <div id="rand-log" class="rand-buttons">
+      <button id="rand-show-history" type="button" class="rand-button rand-inactive-button" disabled>History</button>
+      <button id="rand-clear-all" type="button" class="rand-button rand-inactive-button" disabled>Clear
+        all</button>
+    </div>
+    <div id="rand-history" class="rand-history rand-history-hidden">
+      <div id="rand-rolls-history"></div>
+      <button id="rand-close-history" class="rand-button">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: black;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#rand-container {
+  width: 300px;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid white;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#rand-title {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0px 0px 20px white;
+}
+
+.rand-dices {
+  width: 100%;
+  height: 149px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px 0;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.rand-selected {
+  height: 225px;
+  color: white;
+  line-height: 225px;
+  font-size: 25px;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.rand-dice {
+  width: 73px;
+  height: 73px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 73px;
+  cursor: pointer;
+  color: black;
+  font-size: 25px;
+  text-shadow: 0px 0px 15px black;
+  position: relative;
+  outline: none;
+}
+
+.rand-dice-blocked {
+  color: red;
+  cursor: not-allowed;
+}
+
+.rand-dice-blocked:hover {
+  color: red;
+}
+
+.rand-buttons {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.rand-button {
+  width: 140px;
+  height: 40px;
+  border: 1px solid white;
+  outline: none;
+  font-size: 30px;
+  text-shadow: 0px 0px 5px #000;
+  border-radius: 10px;
+  color: #adadad;
+  margin: auto 0;
+  background-color: #000;
+}
+
+.rand-button:hover {
+  text-shadow: 0px 0px 15px #fff;
+  color: #fff;
+  box-shadow: 0px 0px 10px 2px white;
+  cursor: pointer;
+}
+
+.rand-inactive-button {
+  text-shadow: 0px 0px 5px #fff;
+  color: black;
+}
+
+.rand-inactive-button:hover {
+  text-shadow: 0px 0px 5px #fff;
+  color: black;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#rand-total {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+#rand-log {
+  border-top: 1px solid white;
+}
+
+.rand-history {
+  position: absolute;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+}
+
+.rand-history-hidden {
+  display: none;
+}
+
+#rand-rolls-history {
+  line-height: 10px;
+  width: 98%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  overflow-y: auto;
+  padding: 0 5px 0 5px;
+}
+
+.rand-history-text {
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  text-align: right;
+}
+
+.rand-history-total {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rand-close-history {
+  margin: 5px auto;
+  width: 80%;
+}
+
+.rand-padlock {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 150;
+  outline: none;
+  background-image: url('/img/padlock_open.png');
+}
+
+.rand-padlock-closed {
+  background-image: url('/img/padlock_closed.png');
+}
+
+.rand-toroll-container {
+  display: flex;
+  width: 73px;
+  height: 73px;
+  position: relative;
+}
+
+.rand-coin-container {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  display: flex;
+  transform-style: preserve-3d;
+  animation: flip 2s linear infinite;
+}
+
+.rand-coin-container-hidden {
+  display: none;
+}
+
+.rand-coin-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  left: 0;
+}
+
+.rand-coin-tails {
+  transform: rotateY(180deg);
+}
+
+@keyframes flip {
+  0% {
+    bottom: -300px;
+    transform: rotateX(90deg);
+  }
+
+  40% {
+    bottom: 0px;
+    transform: rotateX(720deg);
+  }
+
+  50% {
+    bottom: 0px;
+    transform: rotateX(900deg);
+  }
+
+  60% {
+    bottom: 0px;
+    transform: rotateX(720deg)
+  }
+
+  100% {
+    bottom: -300px;
+    transform: rotateX(90deg);
+  }
+}
